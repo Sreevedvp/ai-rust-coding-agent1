@@ -1,6 +1,6 @@
 use crate::memory::conversation::Message;
 use crate::{AssistantError, Result};
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
 pub use crate::memory::conversation::ConversationManager;
 
@@ -22,4 +22,25 @@ pub fn load_conversation(path: impl AsRef<Path>) -> Result<Vec<Message>> {
         .map_err(|e| AssistantError::SerializationError(e.to_string()))?;
     
     Ok(messages)
+}
+
+pub fn get_persistent_conversation_path(data_dir: &Path) -> PathBuf {
+    data_dir.join("conversations").join("persistent_chat.json")
+}
+
+pub fn save_persistent_conversation(messages: &[Message], data_dir: &Path) -> Result<()> {
+    let path = get_persistent_conversation_path(data_dir);
+    if let Some(parent) = path.parent() {
+        std::fs::create_dir_all(parent)?;
+    }
+    save_conversation(messages, path)
+}
+
+pub fn load_persistent_conversation(data_dir: &Path) -> Result<Vec<Message>> {
+    let path = get_persistent_conversation_path(data_dir);
+    if path.exists() {
+        load_conversation(path)
+    } else {
+        Ok(Vec::new())
+    }
 }

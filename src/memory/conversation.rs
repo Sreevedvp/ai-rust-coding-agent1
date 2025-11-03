@@ -40,6 +40,23 @@ impl ConversationManager {
         }
     }
 
+    pub fn new_with_history(max_history: usize, history: Vec<Message>) -> Self {
+        let mut messages = VecDeque::new();
+        for msg in history {
+            messages.push_back(msg);
+        }
+        
+        // Keep only the most recent messages
+        while messages.len() > max_history {
+            messages.pop_front();
+        }
+        
+        Self {
+            messages,
+            max_history,
+        }
+    }
+
     pub fn add_message(&mut self, role: String, content: String) {
         let message = Message::new(role, content);
         self.messages.push_back(message);

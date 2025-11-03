@@ -7,7 +7,7 @@ use colored::*;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    println!("{}", "🚀 Starting Personal Assistant...".bold().cyan());
+    println!("{}", "💖 Starting Your AI Companion...".bold().magenta());
     
     // Load settings
     let settings = Settings::new()?;
@@ -19,7 +19,7 @@ async fn main() -> anyhow::Result<()> {
     // Initialize assistant
     match Assistant::new(settings).await {
         Ok(assistant) => {
-            println!("{} Assistant ready!\n", "✅".green());
+            println!("{} Your companion is ready to chat! 💕\n", "✅".green());
             
             // Start interactive UI
             let ui = UI::new(assistant);

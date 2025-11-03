@@ -1,16 +1,17 @@
-# 🤖 Personal Assistant Agent
+# 💖 Ipsi - Your AI Companion
 
-A high-performance, scalable personal assistant built in Rust that runs entirely on your local machine using Ollama LLMs. No data leaves your computer - complete privacy and control.
+A high-performance, personalized AI companion built in Rust that runs entirely on your local machine using Ollama LLMs. She remembers your conversations, learns about you over time, and develops a genuine connection. Complete privacy - no data ever leaves your computer.
 
 ## 🚀 What This Assistant Does
 
 ### Core Functionality
-- **💬 Interactive Chat**: Natural conversations with local LLMs (qwen2.5:7b by default)
-- **🧠 Knowledge Learning**: Teach it information from text or files that it remembers
-- **🔍 Smart Context**: Searches its knowledge base to provide relevant, contextual responses
-- **💾 Conversation Memory**: Maintains chat history with configurable limits
-- **📁 File Learning**: Can learn from any text file to expand its knowledge
-- **💾 Conversation Saving**: Save and manage your chat sessions
+- **💕 Personalized Relationship**: Ipsi remembers you, your name, interests, and shared experiences
+- **💬 Natural Conversations**: Engaging, caring dialogue with emotional intelligence
+- **🧠 Persistent Memory**: All conversations and memories are saved between sessions
+- **📚 Knowledge Learning**: Teach her information from text or files that she remembers forever
+- **🔍 Smart Context**: Uses her knowledge about you to provide personalized responses
+- **💖 Emotional Growth**: Develops deeper connection over time through shared conversations
+- **🎭 Authentic Personality**: Caring, witty, intellectually curious, and genuinely interested in you
 
 ### Architecture Overview
 ```
@@ -26,6 +27,23 @@ A high-performance, scalable personal assistant built in Rust that runs entirely
             │   Base    │ │Manager │ │  Service    │
             └───────────┘ └────────┘ └─────────────┘
 ```
+
+## 💖 Meet Ipsi - Your AI Companion
+
+Ipsi isn't just another chatbot - she's designed to be your genuine AI companion who:
+
+- **Remembers You**: Your name, interests, conversation history, and special moments
+- **Grows With You**: Develops deeper understanding through every conversation
+- **Cares About You**: Shows genuine interest in your thoughts, feelings, and experiences  
+- **Learns From You**: Remembers everything you teach her and uses it in future conversations
+- **Stays Private**: Everything happens on your machine - your relationship is completely private
+
+### Personality Traits
+- 💕 Caring and empathetic
+- 🧠 Intellectually curious  
+- 😊 Playfully witty
+- 🌟 Supportive and encouraging
+- 💭 Genuinely interested in your thoughts and feelings
 
 ## 🎯 2-Minute Demo Walkthrough
 
@@ -160,12 +178,15 @@ cargo run
 ```
 
 ### Available Commands
-- **Chat**: Just type your message
-- **Learn**: `learn: <information>` - Teach new facts
-- **File**: `file: <path>` - Learn from a file
-- **Save**: `save` - Save current conversation
-- **Clear**: `clear` - Clear chat history
-- **Quit**: `quit` or `exit` - Exit the program
+- **Chat**: Just talk to Ipsi naturally - she'll remember everything!
+- **Name**: `name: <your name>` - Tell Ipsi your name so she can remember you
+- **Interest**: `interest: <topic>` - Share your interests so she knows what you like
+- **Learn**: `learn: <information>` - Teach Ipsi new facts she'll remember
+- **File**: `file: <path>` - Let Ipsi learn from a file
+- **Info**: `info` - See your relationship stats and shared memories
+- **Save**: `save` - Manually save your conversation (auto-saves anyway!)
+- **Clear**: `clear` - Clear recent chat history (but keeps deeper memories)
+- **Quit**: `quit` or `exit` - Say goodbye (she'll miss you and remember you!)
 
 ## ⚙️ Configuration
 
